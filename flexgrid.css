@@ -1,0 +1,55 @@
+[class*='col-'] {
+    padding: 15px;
+}
+
+.container {
+    width: 100%;
+    display: inline-flex;
+    flex-flow: column;
+}
+.row {
+    display: inline-flex;
+    justify-content: center;
+}
+.col-1-2 {
+    width: 49%;
+}
+.col-1-4 {
+    width: 24%;
+}
+.col-1-5 {
+    width: 19%;
+}
+@media screen and (max-width: 768px) {
+    .row {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+    .col-1-4 {
+        width: 22.2%;
+        display: inline-flex;
+    }
+    .row .col-1-2 {
+        width: 37%;
+        display: inline-flex;
+        justify-content: space-around;
+    }
+    .row .col-1-5 {
+        margin: 5px;
+        display: inline-flex;
+        justify-content: center;
+    }
+}
+    @media screen and (max-width: 400px) {
+    .row .col-1-2 {
+        width: auto;
+        display: block;
+        text-align: center;
+    }
+    .row .col-1-4 {
+        display: flex;
+        flex-flow: row nowrap;
+        width: auto;
+    }
+}
